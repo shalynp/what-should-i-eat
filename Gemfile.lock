@@ -26,10 +26,13 @@ GEM
     http-form_data (2.3.0)
     http-parser (1.2.3)
       ffi-compiler (>= 1.0, < 2.0)
+    nokogiri (1.11.1-x86_64-darwin)
+      racc (~> 1.4)
     parallel (1.20.1)
     parser (3.0.0.0)
       ast (~> 2.4.1)
     public_suffix (4.0.6)
+    racc (1.5.2)
     rainbow (3.0.0)
     rake (13.0.3)
     regexp_parser (2.1.1)
@@ -55,6 +58,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  nokogiri
   rake (~> 13.0)
   rubocop (~> 1.7)
   what_should_i_eat!

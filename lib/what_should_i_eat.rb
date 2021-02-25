@@ -1,20 +1,30 @@
 # frozen_string_literal: true
-require "nokogiri"
-require "open_uri"
+
+require "what_should_i_eat/printing"
+require "http"
+require 'json'
 
 require_relative "what_should_i_eat/version"
 
 module WhatShouldIEat
-  class RecipeChooser
+  def self.pick
 
-    doc = Nokogiri::HTML(URI.open('https://www.edamam.com/search?type=Feeds'))
+  result = HTTP.get('https://www.edamam.com/search?type=Feeds').to_s
+  recipes = JSON.parse(result)
 
-    search = doc.css(".label")
-    puts search
+  name = recipes.first['items'].first['label']
+  url =  recipes.first['items'].first['url']
 
-    # list = doc.css(".ingredient")
-    # list.each do |n|
-    #   puts n.inner_html
-    end
+  print "Dinner Tonight: #{name}\n#{url}"
+
+  Printing.print name, url
 
   end
+end
+
+  # Let’s make a to-do list for our gem:
+  # Bundle the gem
+  # Make an HTTP GET request
+  # Parse the returned text as JSON and save it into a variable
+  # Pick out a recipe from the variable
+  # Print that recipe to the screen
