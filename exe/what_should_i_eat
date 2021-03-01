@@ -2,5 +2,4 @@
 
 require "what_should_i_eat"
 
-WhatShouldIEat.pick
-WhatShouldIEat.printing
+WhatShouldIEat.fresh
