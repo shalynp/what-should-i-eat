@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/what_should_i_eat`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Description: Gives a recipe when gem is prompted in terminal
 
 ## Installation
 
@@ -22,7 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Instructions: After gem is installed, run what_should_i_eat on terminal. A recipe will be shown.
+
 
 ## Development
 
